@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+.ca{
+	margin-left:300px;
+	margin-top:50px;
+	border:2px solid #333;
+	width:350px;
+	height:200px;
+	padding:20px;
+	background-image:url(n6.jpg);
+	}
+	
+	</style>
+</head>
+
+<body>
+<div class="ca">
+<form name="fr1">
+<input type="text" name="ans"  style="width:210px; border:5px thick #666; border-bottom:solid; height:25px;"/><br />
+<div class="blink" style="height:28px">
+<input type="button" value="1" onclick="run1()" style="width:50px"/>
+<input type="button" value="2" onclick="run2()" style="width:50px" />
+<input type="button" value="3" onclick="run3()" style="width:50px" />
+<input type="button" value="+" style="width:50px" onclick="runadd()" /><br />
+<input type="button" value="4" style="width:50px" onclick="run4()" />
+<input type="button" value="5" style="width:50px" onclick="run5()" />
+<input type="button" value="6" style="width:50px" onclick="run6()" />
+<input type="button" value="-" style="width:50px" onclick="runsubs()" /><br />
+<input type="button" value="7" style="width:50px" onclick="run7()" />
+<input type="button" value="8" style="width:50px" onclick="run8()" />
+<input type="button" value="9" style="width:50px" onclick="run9()" />
+<input type="button" value="*" style="width:50px" onclick="runmul()" /><br />
+<input type="button" value="0" style="width:50px" onclick="runzero()" />
+<input type="button" value="C" style="width:50px" onclick="runclear()" />
+<input type="button" value="=" style="width:50px" onclick="runequal()" />
+<input type="button" value="/" style="width:50px" onclick="rundiv()" /><br />
+<input type="button" value="sqrt" style="width:50px" onclick="runsquart()" />
+<input type="button" value="sqrare" style="width:50px" onclick="runsquare()" />
+<input type="button" value="absolute" style="width:50px" onclick="runabs()" />
+<input type="button" value="cos" style="width:50px" onclick="runcos()" /><br />
+<input type="button" value="sin" style="width:50px" onclick="runsin()" />
+<input type="button" value="exp" style="width:50px" onclick="runex()" />
+<input type="button" value="cube" style="width:50px" onclick="runcube()" />
+<input type="button" value="delete" style="width:50px" onclick="rundel()" />
+</div>
+</form>
+
+</div>
+<script type="text/javascript">
+function runzero()
+{
+document.fr1.ans.value +='0';
+}
+function run1()
+{
+document.fr1.ans.value +='1';
+}
+function run2()
+{
+document.fr1.ans.value +='2';
+}
+function run3()
+{
+document.fr1.ans.value +='3';
+}
+function run4()
+{
+document.fr1.ans.value +='4';
+}
+function run5()
+{
+document.fr1.ans.value +='5';
+}
+function run6()
+{
+document.fr1.ans.value +='6';
+}
+function run7()
+{
+document.fr1.ans.value +='7';
+}
+function run8()
+{
+document.fr1.ans.value +='8';
+}
+function run9()
+{
+document.fr1.ans.value +='9';
+}
+function runadd()
+{
+document.fr1.ans.value +='+';
+}
+function runsubs()
+{
+document.fr1.ans.value +='-';
+}
+function runmul()
+{
+document.fr1.ans.value +='*';
+}
+function rundiv()
+{
+document.fr1.ans.value +='/';
+}
+function runequal()
+{
+var evalo=eval(document.fr1.ans.value)
+document.fr1.ans.value=evalo;
+}
+function runclear()
+{
+document.fr1.ans.value ='';
+}
+function runsquart()
+{
+var evalo=Math.sqrt(document.fr1.ans.value)
+document.fr1.ans.value=evalo;
+}
+function runsquare()
+{
+var evalo=Math.pow(document.fr1.ans.value,2)
+document.fr1.ans.value=evalo;
+}
+function runabs()
+{
+var evalo=Math.abs(document.fr1.ans.value)
+document.fr1.ans.value=evalo;
+}
+function runcos()
+{
+var evalo=Math.cos(document.fr1.ans.value)
+document.fr1.ans.value=evalo;
+}
+function runsin()
+{
+var evalo=Math.sin(document.fr1.ans.value)
+document.fr1.ans.value=evalo;
+}
+function runex()
+{
+var evalo=Math.exp(document.fr1.ans.value)
+document.fr1.ans.value=evalo;
+}
+function runcube()
+{
+var evalo=Math.pow(document.fr1.ans.value,3)
+document.fr1.ans.value=evalo;
+}
+function rundel()
+{
+	document.fr1.ans.value=document.fr1.ans.value.substring(0,document.fr1.ans.value.length-1);
+	}
+</script>
+</body>
+</html>
